@@ -1,20 +1,41 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Pay Rate Calculator
 
-# Run and deploy your AI Studio app
+Pay Rate Calculator is an interactive, modern web application designed for recruiters and account managers to quickly calculate starting and maximum pay rates and their corresponding profit margins. 
 
-This contains everything you need to run your app locally.
+By inputting a Client Bill Rate ($/hr), the application dynamically generates the corresponding pay rates for W2, C2C, and 1099 employment types using automated percentage scaling.
 
-View your app in AI Studio: https://ai.studio/apps/8abf1cfe-941d-48f6-b192-fd98ca95117b
+## Features
+- **Dynamic Calculation**: Instantly computes starting offers and maximum threshold limits (your "red line") based on pre-defined split brackets.
+- **Multi-Role Profiling**: Calculates splits specifically for W2, C2C, and 1099 contractors.
+- **Margin Previews**: Clearly breaks down the exact dollar margin you pull away from each deal.
+- **Modern UI**: Built with React, Tailwind CSS, and Framer Motion for a responsive, clean, and animated user interface.
 
-## Run Locally
+## Quick Start & Installation
 
-**Prerequisites:**  Node.js
+To run this application locally, you will need [Node.js](https://nodejs.org/) installed on your machine.
 
+1. **Navigate into the project directory**:
+   ```bash
+   cd Payrate
+   ```
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+2. **Install the dependencies**:
+   ```bash
+   npm install
+   ```
+   *(or `yarn install` / `pnpm install` depending on your preferred package manager)*
+
+3. **Start the development server**:
+   ```bash
+   npm run dev
+   ```
+
+4. **View the application**:
+   Open your browser and navigate to the local server URL provided in your terminal (usually `http://localhost:5173/`).
+
+## Tech Stack
+- **React** components and state management
+- **Vite** for fast, high-performance module bundling
+- **Tailwind CSS** for rapid UI styling and structural layouts
+- **Framer Motion** for smooth component animations and transitions
+- **Lucide React** for lightweight, scalable iconography
