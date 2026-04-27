@@ -35,14 +35,14 @@ export default function App() {
     }
 
     // Starting Rates (W2-45%, C2C-25%, 1099-25%)
-    const sW2Pay = Math.round(rate / 1.45);
-    const sC2CPay = Math.round(rate / 1.25);
-    const s1099Pay = Math.round(rate / 1.25);
+    const sW2Pay = Math.max(0, Math.round(rate / 1.45) - 10);
+    const sC2CPay = Math.max(0, Math.round(rate / 1.25) - 10);
+    const s1099Pay = Math.max(0, Math.round(rate / 1.25) - 10);
 
     // Max Rates (W2-35%, C2C-15%, 1099-15%)
-    const mW2Pay = Math.round(rate / 1.35);
-    const mC2CPay = Math.round(rate / 1.15);
-    const m1099Pay = Math.round(rate / 1.15);
+    const mW2Pay = Math.max(0, Math.round(rate / 1.35) - 10);
+    const mC2CPay = Math.max(0, Math.round(rate / 1.15) - 10);
+    const m1099Pay = Math.max(0, Math.round(rate / 1.15) - 10);
 
     setRates({
       starting: {
@@ -285,20 +285,6 @@ function RateCard({ title, pay, margin, icon, theme, label, delay }: RateCardPro
         </motion.p>
       </div>
 
-      <div className="w-full pt-1.5 border-t border-slate-50">
-        <p className="text-sm font-bold text-slate-500">
-          Margin:{" "}
-          <motion.span
-            key={margin}
-            initial={{ opacity: 0, x: -2 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.2, delay: 0.05 }}
-            className={`${colors[theme].margin} font-black inline-block`}
-          >
-            {formatCurrency(margin)}
-          </motion.span>
-        </p>
-      </div>
     </motion.div>
   );
 }
