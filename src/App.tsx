@@ -35,14 +35,14 @@ export default function App() {
     }
 
     // Starting Rates (W2-45%, C2C-25%, 1099-25%)
-    const sW2Pay = Math.max(0, Math.round(rate / 1.45) - 10);
-    const sC2CPay = Math.max(0, Math.round(rate / 1.25) - 10);
-    const s1099Pay = Math.max(0, Math.round(rate / 1.25) - 10);
+    const sW2Pay = Math.max(0, Math.round(rate / 1.45) - 5);
+    const sC2CPay = Math.max(0, Math.round(rate / 1.25) - 5);
+    const s1099Pay = Math.max(0, Math.round(rate / 1.25) - 5);
 
     // Max Rates (W2-35%, C2C-15%, 1099-15%)
-    const mW2Pay = Math.max(0, Math.round(rate / 1.35) - 10);
-    const mC2CPay = Math.max(0, Math.round(rate / 1.15) - 10);
-    const m1099Pay = Math.max(0, Math.round(rate / 1.15) - 10);
+    const mW2Pay = Math.max(0, Math.round(rate / 1.35) - 5);
+    const mC2CPay = Math.max(0, Math.round(rate / 1.15) - 5);
+    const m1099Pay = Math.max(0, Math.round(rate / 1.15) - 5);
 
     setRates({
       starting: {
@@ -115,7 +115,7 @@ export default function App() {
 
         {(!billRate || Number(billRate) <= 0) ? (
           <div className="flex-1 flex flex-col items-center mt-8">
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               className="bg-white/60 p-8 rounded-3xl border border-emerald-100/50 shadow-sm max-w-sm w-full text-center"
