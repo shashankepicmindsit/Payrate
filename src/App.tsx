@@ -35,14 +35,14 @@ export default function App() {
     }
 
     // Starting Rates (W2-45%, C2C-25%, 1099-25%)
-    const sW2Pay = Math.max(0, Math.round(rate / 1.45) - 5);
-    const sC2CPay = Math.max(0, Math.round(rate / 1.25) - 5);
-    const s1099Pay = Math.max(0, Math.round(rate / 1.25) - 5);
+    const sW2Pay = Math.max(0, Math.round(rate / 1.45) - 4);
+    const sC2CPay = Math.max(0, Math.round(rate / 1.25) - 4);
+    const s1099Pay = Math.max(0, Math.round(rate / 1.25) - 4);
 
     // Max Rates (W2-35%, C2C-15%, 1099-15%)
-    const mW2Pay = Math.max(0, Math.round(rate / 1.35) - 5);
-    const mC2CPay = Math.max(0, Math.round(rate / 1.15) - 5);
-    const m1099Pay = Math.max(0, Math.round(rate / 1.15) - 5);
+    const mW2Pay = Math.max(0, Math.round(rate / 1.35) - 4);
+    const mC2CPay = Math.max(0, Math.round(rate / 1.15) - 4);
+    const m1099Pay = Math.max(0, Math.round(rate / 1.15) - 4);
 
     setRates({
       starting: {
